@@ -1,0 +1,196 @@
+:root {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to bottom left, black 30%,
+    rgba(183, 0, 165, .14) 80%
+    );
+}
+
+.background-shapes {
+    position: absolute;
+    bottom: 0;
+    transform: translateY(5px);
+    height: 80vh;
+    left: 70%;
+}
+
+.shape-one, .shape-two, .shape-three {
+    position: absolute;
+    z-index: -1;
+}
+
+.shape-one {
+    width: 20vw;
+    height: 20vw;
+    top: 15%;
+    left: 55%;
+    background-color: transparent;
+}
+
+.shape-one::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(157, 80, 193, 0.1);
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 100px rgba(157, 80, 193, 0.1);
+}
+
+.shape-two {
+    width: 13vw;
+    height: 13vw;
+    top: 80%;
+    left: 25%;
+    background-color: transparent;
+}
+
+.shape-two::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(164, 56, 214, 0.1);
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 50px rgba(164, 56, 214, 0.1);
+}
+
+.shape-three {
+    width: 15vw;
+    height: 15vw;
+    top: 20%;
+    left: 7%;
+    background-color: transparent;
+}
+
+.shape-three::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(110, 2, 69, 0.322);
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 70px rgba(110, 2, 69, 0.322);
+}
+
+.main-image {
+    width: 50%;
+    height: 40%;
+    background-image: url(./images/robotica.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 50px;
+    border-radius: 30px;
+    mix-blend-mode:color-dodge;
+}
+
+.container, .content, .subscribe-section, .one{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subscribe-section {
+    flex-direction: row;
+    /* flex-grow: 1; */
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subscribe-section a {
+    display: block;
+    padding: 10px 15px;
+    background-color: black;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+}
+
+.subscribe-section a:hover {
+    transform: scale(1.1);
+}
+
+.text-section {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    margin-top: 1em;
+}
+
+.content h1 {
+    font-size: 3em;
+    margin-top: .2em;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.container {
+    justify-content: space-between;
+    width: 60vw;
+    height: 86vh;
+    background-color: rgba(51, 51, 51, 0.432);
+    margin-left: 10vh;
+    margin-top: 2vh;
+    border-radius: 30px;
+    box-shadow: 0 0 30px whitesmoke;
+    padding: 50px;
+    gap: 20px;
+}
+
+.content {
+    justify-content: center;
+    width: 80%;
+    height: 550px;
+    background-color: rgba(51, 51, 51, 0.532);
+    border-radius: 30px;
+}
+
+.one {
+    gap:.3em
+}
+
+.one > span {
+    font-weight: bold;
+    font-size: .8em;
+}
+
+@media (max-width: 1500px) {
+    :root {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 1200px) {
+    :root {
+        font-size: 14px;
+    }
+    .main-image {
+        display: none;
+    }
+
+    .content {
+        flex-grow: 1;
+        justify-content: center;
+    }
+
+    .text-section {
+        padding: 10px 50px;
+    }
+
+    .content {
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 1000px) {
+    :root {
+        font-size: 13px;
+    }
+}

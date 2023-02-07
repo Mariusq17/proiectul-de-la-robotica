@@ -1,0 +1,187 @@
+body {
+    overflow: scroll;
+}
+
+.flexbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: .5em;
+}
+.flex-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+.about-us-image {
+    border-radius: 20px;
+    margin: 20px;
+    width: 100%;
+    height: 550px;
+    background-image: url(./images/about-us-image.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.section-one {
+    width: 100%;
+    padding: 30px;
+}
+
+.section-one > h1 {
+    text-align: center;
+    
+}
+
+.section-one > p {
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.flex-item-1 {
+    align-items: center;
+    flex-grow: 1;
+    flex-basis: 0;
+    height:min-content;
+}
+
+.video {
+    margin-top: .5em;
+    width: 90%;
+    border-radius: 20px;
+}
+
+
+
+.aligner {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.flex-item-2 {
+    flex-grow: 1;
+    flex-basis: 0;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: max-content;
+    margin-top: 2em;
+}
+
+.card {
+    background-color: purple;
+    background-image: linear-gradient(to bottom, purple -20%, black);
+    margin: .5em;
+    border-radius: 10px;
+    min-width: 350px;
+    padding: 15px;
+}
+
+.picture {
+    background-color: black;
+    width: 150px;
+    height: 150px;
+    background-image: url(./images/messi-fotbalistul.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    border: 3px;
+    border-style: outset;
+    border-color: #777;
+    margin: 1em;
+}
+
+.card-section-one {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card-section-one-item {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.name-group {
+    margin-bottom: 1em;
+}
+
+.about-this-one  p {
+    padding: 0 30px;
+    margin: .5em auto;
+}
+
+.social-media, .social-media-links, .social-media-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social-media-icons {
+    width: 30px;
+    border-radius: 50%;
+}
+
+.social-media-link {
+    gap: .2em;
+    color: white;
+    text-decoration: none;
+}
+
+.social-media-link:hover {
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
+.social-media-links {
+    gap: 1em;
+}
+
+@media (max-width: 1500px) {
+    .about-us-image {
+    background-size: contain;
+    width: 460px;
+    height: 380px;
+    }
+
+    .aligner h2 {
+        margin-top: 1.5em;
+    }
+
+    .section-one > h1 {
+        margin-top: 1.5em;
+    }
+    .flex-item-1 {
+        padding: 0px;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .about-us-image {
+        margin: 0px;
+        width: 100%;
+        /* background-size: contain; */
+        border-radius: 10px;
+    }
+    .flexbox {
+        flex-direction: column;
+    }
+    .section-one {
+        width: 100%;
+    }
+}
